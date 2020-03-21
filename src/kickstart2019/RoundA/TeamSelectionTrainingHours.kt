@@ -8,16 +8,15 @@ fun main() {
 
     var n: Int
     var p: Int
-    var list: MutableList<Int>
     var prefixSum: Int
     var minHours: Int
 
     for (i in 0 until testCases) {
         n = scanner.nextInt()
         p = scanner.nextInt()
-        list = mutableListOf()
+        val list = IntArray(n)
         for (j in 0 until n) {
-            list.add(scanner.nextInt())
+            list[j] = scanner.nextInt()
         }
         list.sortDescending()
         prefixSum = list.take(p).sum()
